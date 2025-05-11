@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Components - Learning Platform</title>
+    <link href="assets/bootstrap-5.3.2/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.bs.css">
+    
+</head>
+<body>
+    <!-- Sidebar Toggle Button for Mobile -->
+    <button class="sidebar-toggle" id="sidebarToggle">
+        <i class="fa fa-bars"></i>
+    </button>
+    
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="brand">
+                <div class="brand-logo"></div>
+                <span>Learning</span>
+            </div>
+            <div class="">
+                <button class="sidebar-toggle-close" id="sidebarToggleClose">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+
+        </div>
+
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link " href="index.bs.html">
+                    <i class="fa fa-th-large"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="forms.html">
+                    <i class="fa fa-wpforms"></i>
+                    <span>Form Components</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login.html">
+                    <i class="fa fa-wpforms"></i>
+                    <span>Login</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="signup.html">
+                    <i class="fa fa-wpforms"></i>
+                    <span>Signup</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-users"></i>
+                    <span>Users</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-book"></i>
+                    <span>Courses</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-user-friends"></i>
+                    <span>Groups</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-clipboard"></i>
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-file-alt"></i>
+                    <span>Created Material</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-graduation-cap"></i>
+                    <span>Grading</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-question-circle"></i>
+                    <span>Quiz</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-trophy"></i>
+                    <span>Competition</span>
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-file"></i>
+                    <span>CMS page</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-university"></i>
+                    <span>Courses Bank</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-cog"></i>
+                    <span>Setting</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-tasks"></i>
+                    <span>Assignments</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Search Bar -->
+        <div class="search-bar d-flex justify-content-between align-items-center mb-4">
+            <div class="search-container d-flex align-items-center">
+                <input type="text" class="form-control search-input" placeholder="Search">
+                <button class="btn"><i class="fa fa-search"></i></button>
+            </div>
+            
+            <div class="user-controls d-flex align-items-center">
+                <button class="btn me-3"><i class="fa fa-envelope"></i></button>
+                <button class="btn me-3"><i class="fa fa-bell"></i></button>
+                <div class="user-profile">
+                    <div class="profile-img">
+                        <!-- <img src="/api/placeholder/40/40" alt="User Profile"> -->
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="user-info d-none d-md-flex">
+                        <span class="user-name">Jackdoll</span>
+                        <span class="user-email">jackdoll@info</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page Header -->
+        <h2 class="mb-4">Form Components</h2>
+
+        <!-- Basic Form Controls -->
+        <div class="component-card">
+            <h5>Basic Form Controls</h5>
+            <form>
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="inputText" class="form-label">Text Input</label>
+                            <input type="text" class="form-control" id="inputText" placeholder="Enter text">
+                            <div class="form-text">Example help text that remains below the input</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputEmail" class="form-label">Email Input</label>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="name@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputPassword" class="form-label">Password Input</label>
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="inputNumber" class="form-label">Number Input</label>
+                            <input type="number" class="form-control" id="inputNumber" placeholder="Enter number">
+                        </div>
+                        <div class="mb-3">
+                            <label for="textareaExample" class="form-label">Textarea</label>
+                            <textarea class="form-control" id="textareaExample" rows="4" placeholder="Enter text here..."></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="formFile" class="form-label">File Upload</label>
+                        <input class="form-control" type="file" id="formFile">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="formColor" class="form-label">Color Picker</label>
+                        <input type="color" class="form-control form-control-color" id="formColor" value="#000000" title="Choose your color">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Select Inputs -->
+        <div class="component-card">
+            <h5>Select Inputs</h5>
+            <form>
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="selectBasic" class="form-label">Basic Select</label>
+                            <select class="form-select" id="selectBasic">
+                                <option selected>Open this select menu</option>
+                                <option value="1">Option One</option>
+                                <option value="2">Option Two</option>
+                                <option value="3">Option Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="selectDisabled" class="form-label">Disabled Select</label>
+                            <select class="form-select" id="selectDisabled" disabled>
+                                <option selected>Disabled select example</option>
+                                <option value="1">Option One</option>
+                                <option value="2">Option Two</option>
+                                <option value="3">Option Three</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="multipleSelect" class="form-label">Multiple Select</label>
+                            <select class="form-select" id="multipleSelect" multiple>
+                                <option value="1">Option One</option>
+                                <option value="2">Option Two</option>
+                                <option value="3">Option Three</option>
+                                <option value="4">Option Four</option>
+                                <option value="5">Option Five</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="selectSize" class="form-label">Select Size</label>
+                            <select class="form-select" id="selectSize" size="4">
+                                <option value="1">Option One</option>
+                                <option value="2">Option Two</option>
+                                <option value="3">Option Three</option>
+                                <option value="4">Option Four</option>
+                                <option value="5">Option Five</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Checkboxes & Radios -->
+        <div class="component-card">
+            <h5>Checkboxes & Radios</h5>
+            <form>
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <p class="form-label">Checkboxes</p>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Default checkbox
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                                Checked checkbox
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
+                            <label class="form-check-label" for="flexCheckDisabled">
+                                Disabled checkbox
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="form-label">Radio Buttons</p>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Default radio
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Default checked radio
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled" disabled>
+                            <label class="form-check-label" for="flexRadioDisabled">
+                                Disabled radio
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="form-label">Switches</p>
+                        <div class="form-check form-switch mb-2">
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                            <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+                        </div>
+                        <div class="form-check form-switch mb-2">
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                            <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+                        </div>
+                        <div class="form-check form-switch mb-2">
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" disabled>
+                            <label class="form-check-label" for="flexSwitchCheckDisabled">Disabled switch checkbox input</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="form-label">Inline Checkboxes & Radios</p>
+                        <div class="mb-3">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox1">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                <label class="form-check-label" for="inlineCheckbox2">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+                                <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <label class="form-check-label" for="inlineRadio1">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="inlineRadio2">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+                                <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        <!-- Input Groups -->
+        <div class="component-card">
+            <h5>Input Groups</h5>
+            <form>
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="basicInputGroup" class="form-label">Basic Input Group</label>
+                            <div class="input-group">
+                                <span class="input-group-text">@</span>
+                                <input type="text" class="form-control" id="basicInputGroup" placeholder="Username">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="priceInputGroup" class="form-label">Price Input Group</label>
+                            <div class="input-group">
+                                <span class="input-group-text">$</span>
+                                <input type="text" class="form-control" id="priceInputGroup" placeholder="Price">
+                                <span class="input-group-text">.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="buttonInputGroup" class="form-label">Button Input Group</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="buttonInputGroup" placeholder="Search">
+                                <button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="dropdownInputGroup" class="form-label">Dropdown Input Group</label>
+                            <div class="input-group">
+                                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Options</button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Option 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Option 2</a></li>
+                                    <li><a class="dropdown-item" href="#">Option 3</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Separated option</a></li>
+                                </ul>
+                                <input type="text" class="form-control" id="dropdownInputGroup">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        <!-- Form Sizing -->
+        <div class="component-card">
+            <h5>Form Sizing</h5>
+            <form>
+                <div class="row mb-4">
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <label for="lgInput" class="form-label">Large Input</label>
+                            <input class="form-control form-control-lg" type="text" id="lgInput" placeholder="Large input">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <label for="defaultInput" class="form-label">Default Input</label>
+                            <input class="form-control" type="text" id="defaultInput" placeholder="Default input">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <label for="smInput" class="form-label">Small Input</label>
+                            <input class="form-control form-control-sm" type="text" id="smInput" placeholder="Small input">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <label for="lgSelect" class="form-label">Large Select</label>
+                            <select class="form-select form-select-lg" id="lgSelect">
+                                <option selected>Large select</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <label for="defaultSelect" class="form-label">Default Select</label>
+                            <select class="form-select" id="defaultSelect">
+                                <option selected>Default select</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <label for="smSelect" class="form-label">Small Select</label>
+                            <select class="form-select form-select-sm" id="smSelect">
+                                <option selected>Small select</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        <!-- Form Validation -->
+        <div class="component-card">
+            <h5>Form Validation</h5>
+            <form class="needs-validation" novalidate>
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <label for="validationFirstName" class="form-label">First name</label>
+                        <input type="text" class="form-control" id="validationFirstName" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please provide a first name.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="validationLastName" class="form-label">Last name</label>
+                        <input type="text" class="form-control" id="validationLastName" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please provide a last name.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="validationEmail" class="form-label">Email</label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                            <input type="email" class="form-control" id="validationEmail" aria-describedby="inputGroupPrepend" required>
+                            <div class="invalid-feedback">
+                                Please enter a valid email.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="validationCity" class="form-label">City</label>
+                        <input type="text" class="form-control" id="validationCity" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid city.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="validationState" class="form-label">State</label>
+                        <select class="form-select" id="validationState" required>
+                            <option selected disabled value="">Choose...</option>
+                            <option>California</option>
+                            <option>New York</option>
+                            <option>Texas</option>
+                            <option>Florida</option>
+
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="assets/bootstrap-5.3.2/bootstrap.bundle.min.js"></script>
+    
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>

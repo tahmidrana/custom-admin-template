@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Platform - Sign Up</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="assets/bootstrap-5.3.2/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.bs.css">
+    <style>
+        
+        .auth-feature-item {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+        }
+        .auth-feature-icon {
+            margin-right: 1rem;
+            font-size: 1.5rem;
+            width: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid auth-container my-4">
+        <div class="d-flex align-items-center auth-mb-4">
+            <div class="auth-brand-logo">
+                <i class="fas fa-graduation-cap text-dark"></i>
+            </div>
+            <h3 class="auth-mb-0">Learning</h3>
+        </div>
+        
+        <div class="card auth-login-card">
+            <div class="row g-0">
+                <div class="col-md-5">
+                    <div class="auth-left-panel h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <h2 class="auth-mb-4">Join our learning community</h2>
+                            <p class="auth-text-light auth-opacity-75">Access 2,635 courses and enhance your skills with our expert-led training programs.</p>
+                            
+                            <div class="auth-mt-5">
+                                <div class="auth-feature-item">
+                                    <div class="auth-feature-icon">
+                                        <i class="fas fa-code"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="auth-mb-1">Coding Innovation Hub</h5>
+                                        <p class="auth-text-light auth-opacity-75 auth-mb-0">Learn from 635 coding courses and advance your programming skills</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="auth-feature-item">
+                                    <div class="auth-feature-icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="auth-mb-1">Community Learning</h5>
+                                        <p class="auth-text-light auth-opacity-75 auth-mb-0">Join 2,635 users learning together in our collaborative environment</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="auth-feature-item">
+                                    <div class="auth-feature-icon">
+                                        <i class="fas fa-certificate"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="auth-mb-1">Certified Courses</h5>
+                                        <p class="auth-text-light auth-opacity-75 auth-mb-0">Get recognized with our industry-standard certifications</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="auth-mt-4">
+                            <p class="auth-text-light auth-opacity-75">Already have an account? <a href="#" class="text-white">Log in</a></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-7">
+                    <div class="auth-right-panel">
+                        <h3 class="auth-mb-4">Create your account</h3>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="auth-social-login mb-2">
+                                    <i class="fab fa-google me-2"></i> Signup with Google
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="auth-social-login mb-2">
+                                    <i class="fab fa-apple me-2"></i> Signup with Apple
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="auth-divider">
+                            <div class="auth-divider-line"></div>
+                            <div class="auth-divider-text">or sign up with email</div>
+                            <div class="auth-divider-line"></div>
+                        </div>
+                        
+                        <form class="auth-form">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="auth-form-label">First Name</label>
+                                    <input type="text" class="form-control auth-form-control" id="firstName" placeholder="Enter your first name">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="auth-form-label">Last Name</label>
+                                    <input type="text" class="form-control auth-form-control" id="lastName" placeholder="Enter your last name">
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="email" class="auth-form-label">Email Address</label>
+                                <input type="email" class="form-control auth-form-control" id="email" placeholder="Enter your email">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="password" class="auth-form-label">Password</label>
+                                <input type="password" class="form-control auth-form-control" id="password" placeholder="Create a password">
+                                <div class="form-text">Password must be at least 8 characters long</div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="agreeTerms">
+                                    <label class="form-check-label" for="agreeTerms">
+                                        I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="d-grid">
+                                <button type="submit" class="btn auth-btn-primary btn-lg">Create Account</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="assets/bootstrap-5.3.2/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>

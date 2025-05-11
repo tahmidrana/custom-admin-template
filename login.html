@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Platform - Login</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="assets/bootstrap-5.3.2/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.bs.css">
+    
+</head>
+<body>
+    <div class="container-fluid auth-container my-4">
+        <div class="d-flex align-items-center mb-4">
+            <div class="auth-brand-logo">
+                <i class="fas fa-graduation-cap text-dark"></i>
+            </div>
+            <h3 class="mb-0">Learning</h3>
+        </div>
+        
+        <div class="card auth-login-card">
+            <div class="row g-0">
+                <div class="col-md-5">
+                    <div class="auth-left-panel h-100 d-flex flex-column justify-content-center align-items-center text-center">
+                        <div>
+                            <div class="auth-welcome-icon">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <h2 class="mb-4">Welcome Back</h2>
+                            <p class="auth-text-light auth-opacity-75">Log in to continue your learning journey and access your personalized dashboard.</p>
+                            
+                            <div class="d-flex justify-content-center mt-5">
+                                <div class="auth-feature-icon">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                                <div class="auth-feature-icon">
+                                    <i class="fas fa-book-open"></i>
+                                </div>
+                                <div class="auth-feature-icon">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-7">
+                    <div class="auth-right-panel">
+                        <h3 class="mb-4">Log in to your account</h3>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="auth-social-login mb-2">
+                                    <i class="fab fa-google me-2"></i> Login with Google
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="auth-social-login mb-2">
+                                    <i class="fab fa-apple me-2"></i> Login with Apple
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="auth-divider">
+                            <div class="auth-divider-line"></div>
+                            <div class="auth-divider-text">or login with email</div>
+                            <div class="auth-divider-line"></div>
+                        </div>
+                        
+                        <form class="auth-form">
+                            <div class="mb-3">
+                                <label for="email" class="auth-form-label">Email Address</label>
+                                <input type="email" class="form-control auth-form-control" id="email" placeholder="Enter your email">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="password" class="auth-form-label">Password</label>
+                                <input type="password" class="form-control auth-form-control" id="password" placeholder="Enter your password">
+                                <div class="d-flex justify-content-end">
+                                    <a href="#" class="auth-forgot-link">Forgot password?</a>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="rememberMe">
+                                    <label class="form-check-label" for="rememberMe">
+                                        Remember me
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="d-grid mb-4">
+                                <button type="submit" class="btn auth-btn-primary btn-lg">Log In</button>
+                            </div>
+                            
+                            <div class="text-center">
+                                <p class="mb-0">Don't have an account? <a href="#" class="fw-bold">Sign up</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="assets/bootstrap-5.3.2/bootstrap.bundle.min.js"></script>
+    
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>

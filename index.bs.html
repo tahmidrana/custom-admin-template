@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Dashboard</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="assets/bootstrap-5.3.2/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <!-- <link rel="stylesheet" href="assets/css/fontawesome-6.4.2.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/styles.bs.css">
+    
+</head>
+<body>
+        
+    <!-- Sidebar Toggle Button for Mobile -->
+    <button class="sidebar-toggle" id="sidebarToggle">
+        <i class="fa fa-bars"></i>
+    </button>
+    
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="brand">
+                <div class="brand-logo"></div>
+                <span>Learning</span>
+            </div>
+            <div class="">
+                <button class="sidebar-toggle-close" id="sidebarToggleClose">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+
+        </div>
+
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link active" href="index.bs.html">
+                    <i class="fa fa-th-large"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="forms.html">
+                    <i class="fa fa-wpforms"></i>
+                    <span>Form Components</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login.html">
+                    <i class="fa fa-wpforms"></i>
+                    <span>Login</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="signup.html">
+                    <i class="fa fa-wpforms"></i>
+                    <span>Signup</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-users"></i>
+                    <span>Users</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-book"></i>
+                    <span>Courses</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-user-friends"></i>
+                    <span>Groups</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-clipboard"></i>
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-file-alt"></i>
+                    <span>Created Material</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-graduation-cap"></i>
+                    <span>Grading</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-question-circle"></i>
+                    <span>Quiz</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-trophy"></i>
+                    <span>Competition</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-file"></i>
+                    <span>CMS page</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-university"></i>
+                    <span>Courses Bank</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-cog"></i>
+                    <span>Setting</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-tasks"></i>
+                    <span>Assignments</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Search Bar -->
+        <div class="search-bar d-flex justify-content-between align-items-center mb-4">
+            <div class="search-container d-flex align-items-center">
+                <input type="text" class="form-control search-input" placeholder="Search">
+                <button class="btn"><i class="fa fa-search"></i></button>
+
+            </div>
+            <div class="user-controls d-flex align-items-center">
+                <button class="btn me-3"><i class="fa fa-envelope"></i></button>
+                <button class="btn me-3"><i class="fa fa-bell"></i></button>
+                <div class="user-profile auth-profile-button" id="profileButton">
+                    <div class="profile-img">
+                        <!-- <img src="/api/placeholder/40/40" alt="User Profile"> -->
+                        <i class="fas fa-user"></i>
+                    </div>
+
+                    <div class="user-info d-none d-md-flex">
+                        <span class="user-name">Jackdoll</span>
+                        <span class="user-email">jackdoll@info</span>
+                    </div>
+
+
+                    <!-- Dropdown menu -->
+                    <div class="auth-dropdown-menu" id="profileDropdown">
+                        <div class="auth-dropdown-header">
+                            <p class="auth-profile-name mb-1">Jackdoll</p>
+                            <p class="auth-profile-email mb-0">jackdoll@info</p>
+                        </div>
+                        
+                        <a href="#" class="auth-dropdown-item">
+                            <i class="fas fa-user-circle"></i>
+                            My Profile
+                        </a>
+                        
+                        <a href="#" class="auth-dropdown-item">
+                            <i class="fas fa-cog"></i>
+                            Account Settings
+                        </a>
+                        
+                        <a href="#" class="auth-dropdown-item">
+                            <i class="fas fa-book"></i>
+                            My Courses
+                        </a>
+                        
+                        <div class="auth-dropdown-divider"></div>
+                        
+                        <a href="#" class="auth-dropdown-item">
+                            <i class="fas fa-question-circle"></i>
+                            Help Center
+                        </a>
+                        
+                        <div class="auth-dropdown-divider"></div>
+                        
+                        <a href="#" class="auth-dropdown-item auth-dropdown-logout">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Logout
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboard Header -->
+        <h2 class="mb-4">Dashboard</h2>
+
+        <!-- Stats Cards First Row -->
+        <div class="row g-4 mb-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="stat-card">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <div class="label">Total Users</div>
+                            <div class="number">2635</div>
+                        </div>
+                        <div class="icon bg-light">
+                            <i class="fa fa-user"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="stat-card">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <div class="label">Coding</div>
+                            <div class="label">Innovation Hub</div>
+                            <div class="number">635</div>
+                        </div>
+                        <div class="icon bg-light">
+                            <i class="fa fa-code"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="stat-card">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <div class="label">Coding</div>
+                            <div class="label">Institution(Trainer)</div>
+                            <div class="number">530</div>
+                        </div>
+                        <div class="icon bg-light">
+                            <i class="fa fa-desktop"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="stat-card">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <div class="label">Total</div>
+                            <div class="label">Courses</div>
+                            <div class="number">2635</div>
+                        </div>
+                        <div class="icon bg-light">
+                            <i class="fa fa-book-open"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Cards Second Row -->
+        <div class="row g-4 mb-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="stat-card">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <div class="label">Quiz</div>
+                            <div class="number">2635</div>
+                        </div>
+                        <div class="icon bg-light">
+                            <i class="fa fa-question-circle"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="stat-card">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <div class="label">Total</div>
+                            <div class="label">assignments</div>
+                            <div class="number">520</div>
+                        </div>
+                        <div class="icon bg-light">
+                            <i class="fa fa-file-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="stat-card">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <div class="label">Created</div>
+                            <div class="label">Material</div>
+                            <div class="number">2635</div>
+                        </div>
+                        <div class="icon bg-light">
+                            <i class="fa fa-file-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="stat-card">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <div class="label">Total</div>
+                            <div class="label">Payment</div>
+                            <div class="number">$10530</div>
+                        </div>
+                        <div class="icon bg-light">
+                            <i class="fa fa-dollar-sign"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popular Courses Section -->
+        <div class="courses-section">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4 class="m-0">Popular Courses</h4>
+                <a href="#" class="text-decoration-none">View all</a>
+            </div>
+
+            <div class="course-item mb-2">
+                <div class="d-flex align-items-center">
+                    <div class="course-icon">
+                        <i class="fa fa-file text-white"></i>
+                    </div>
+                    <div class="course-info">
+                        <h5>Course 01</h5>
+                        <p>40+ Courses</p>
+                    </div>
+                </div>
+                <button class="btn view-btn">View Course</button>
+            </div>
+
+            <div class="course-item mb-2">
+                <div class="d-flex align-items-center">
+                    <div class="course-icon">
+                        <i class="fa fa-file text-white"></i>
+                    </div>
+                    <div class="course-info">
+                        <h5>Course 02</h5>
+                        <p>55+ Courses</p>
+                    </div>
+                </div>
+                <button class="btn view-btn">View Course</button>
+            </div>
+
+            <div class="course-item">
+                <div class="d-flex align-items-center">
+                    <div class="course-icon">
+                        <i class="fa fa-file text-white"></i>
+                    </div>
+                    <div class="course-info">
+                        <h5>Course 03</h5>
+                        <p>60+ Courses</p>
+                    </div>
+                </div>
+                <button class="btn view-btn">View Course</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="assets/bootstrap-5.3.2/bootstrap.bundle.min.js"></script>
+    
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>
