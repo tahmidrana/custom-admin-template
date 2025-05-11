@@ -1,10 +1,28 @@
 :root {
+    --primary: #111111;
+    --secondary: #555555;
+    --success: #28a745;
+    --danger: #dc3545;
+    --warning: #ffc107;
+    --info: #17a2b8;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --gray: #6c757d;
+    --gray-light: #e9ecef;
+    --white: #ffffff;
+    --border-radius: 12px;
+    --box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    --transition: all 0.3s ease;
+
     --sidebar-width: 280px;
     --sidebar-bg: #000;
-    --sidebar-color: #fff;
-    --card-border-radius: 10px;
-    --primary-color: #000;
-    --secondary-color: #666;
+    --sidebar-color: var(--white);
+    /* --card-border-radius: 10px; */
+    /* --primary-color: #000; */
+    /* --secondary-color: #666; */
+    --card-border-radius: var(--border-radius);
+    --primary-color: var(--primary);
+    --secondary-color: var(--secondary);
 
     --bs-nav-link-font-size: 16px;
 }
@@ -13,8 +31,461 @@ body {
     font-family: 'Poppins', sans-serif;
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     background-color: #f5f5f5;
+    color: var(--dark);
     margin: 0;
     padding: 0;
+}
+
+/* --------------- */
+/* 1. CARD STYLES */
+/* --------------- */
+.card {
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.card:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card-header {
+    background-color: var(--white);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding: 1.25rem 1.5rem;
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-footer {
+    background-color: var(--white);
+    border-top: 1px solid rgba(0,0,0,0.05);
+    padding: 1.25rem 1.5rem;
+}
+
+/* Card variations */
+.card-stats {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.card-stats-icon {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(0,0,0,0.05);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.card-stats-info h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.card-stats-info p {
+    color: var(--gray);
+    margin-bottom: 0;
+}
+
+/* Feature card */
+.card-feature {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    border: none;
+    box-shadow: var(--box-shadow);
+}
+
+.card-feature-img {
+    height: 180px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card-feature .card-body {
+    padding: 1.5rem;
+}
+
+/* --------------- */
+/* 2. BUTTON STYLES */
+/* --------------- */
+.btn {
+    border-radius: 8px;
+    padding: 0.5rem 1.25rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.btn-lg {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+}
+
+.btn-sm {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #000000;
+    border-color: #000000;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+/* Button with icon */
+.btn-icon {
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-icon i {
+    margin-right: 0.5rem;
+}
+
+/* Rounded button */
+.btn-rounded {
+    border-radius: 50px;
+}
+
+/* Floating action button */
+.btn-floating {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    padding: 0;
+}
+
+.btn-floating i {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+/* Ghost button */
+.btn-ghost {
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--primary);
+}
+
+.btn-ghost:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+
+/* --------------- */
+/* 3. ALERT STYLES */
+/* --------------- */
+.alert {
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+}
+
+.alert-icon {
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+}
+
+.alert-primary {
+    background-color: rgba(17, 17, 17, 0.1);
+    color: var(--primary);
+}
+
+.alert-success {
+    background-color: rgba(40, 167, 69, 0.1);
+    color: var(--success);
+}
+
+.alert-danger {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: var(--danger);
+}
+
+.alert-warning {
+    background-color: rgba(255, 193, 7, 0.1);
+    color: #856404;
+}
+
+.alert-info {
+    background-color: rgba(23, 162, 184, 0.1);
+    color: var(--info);
+}
+
+/* Alert with close button */
+.alert-dismissible {
+    padding-right: 3rem;
+}
+
+.alert-dismissible .btn-close {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    padding: 0.5rem;
+    background: transparent;
+    border: none;
+    opacity: 0.5;
+}
+
+/* Banner alert */
+.alert-banner {
+    border-radius: 0;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 0.75rem;
+    font-size: 0.875rem;
+}
+
+/* --------------- */
+/* 4. MODAL STYLES */
+/* --------------- */
+.modal-content {
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding: 1.5rem;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.modal-footer {
+    border-top: 1px solid rgba(0,0,0,0.05);
+    padding: 1.25rem 1.5rem;
+}
+
+.modal-title {
+    font-weight: 600;
+}
+
+/* Center modal */
+.modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 3.5rem);
+}
+
+/* Full modal */
+.modal-fullscreen {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    max-width: none;
+}
+
+.modal-fullscreen .modal-content {
+    height: 100%;
+    border: 0;
+    border-radius: 0;
+}
+
+/* Success modal */
+.modal-success .modal-header {
+    background-color: var(--success);
+    color: white;
+}
+
+/* Danger modal */
+.modal-danger .modal-header {
+    background-color: var(--danger);
+    color: white;
+}
+
+/* --------------- */
+/* 5. LINK STYLES */
+/* --------------- */
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: #000000;
+}
+
+/* Animated underline link */
+.link-underline {
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.link-underline::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+}
+
+.link-underline:hover::after {
+    width: 100%;
+}
+
+/* Icon link */
+.link-icon {
+    display: inline-flex;
+    align-items: center;
+}
+
+.link-icon i {
+    margin-left: 0.35rem;
+    font-size: 0.75em;
+    transition: transform 0.2s ease;
+}
+
+.link-icon:hover i {
+    transform: translateX(3px);
+}
+
+/* Card link */
+.link-card {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.link-card:hover {
+    color: inherit;
+}
+
+/* Muted link */
+.link-muted {
+    color: var(--gray);
+}
+
+.link-muted:hover {
+    color: var(--dark);
+}
+
+/* Breadcrumb custom styling */
+.breadcrumb {
+    padding: 0.75rem 1rem;
+    background-color: rgba(0,0,0,0.03);
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+/* --------------- */
+/* 6. FORM STYLES */
+/* --------------- */
+.form-control {
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(0,0,0,0.1);
+    transition: var(--transition);
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem rgba(0,0,0,0.1);
+}
+
+.form-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.form-text {
+    color: var(--gray);
+    font-size: 0.875rem;
+}
+
+/* Form floating labels */
+.form-floating > .form-control {
+    padding: 1.25rem 1rem;
+}
+
+.form-floating > label {
+    padding: 1rem;
+}
+
+/* --------------- */
+/* 7. BADGE STYLES */
+/* --------------- */
+.badge {
+    padding: 0.35em 0.65em;
+    font-weight: 500;
+    border-radius: 6px;
+}
+        
+.badge-pill {
+    border-radius: 50px;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+}
+
+/* --------------- */
+/* 8. TABLE STYLES */
+/* --------------- */
+.table {
+    margin-bottom: 0;
+}
+
+.table-container {
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.table thead th {
+    background-color: rgba(0,0,0,0.02);
+    font-weight: 600;
+    border-bottom-width: 1px;
+    padding: 1rem;
+}
+
+.table tbody td {
+    padding: 1rem;
+    vertical-align: middle;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0,0,0,0.02);
 }
 
 .sidebar {
